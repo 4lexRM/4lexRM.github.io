@@ -1,0 +1,314 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-link, .nav-link-inside {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-link:hover, .nav-link-inside:hover {
+    color: #7494ec;
+}
+
+.ops {
+    width: 250px;
+    margin: 6px;
+    background-color: #fff;
+    border-right: 1px solid #e0e0e0;
+    border-radius: 0 16px 16px 0;
+    height: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-item {
+    position: relative;
+}
+
+.list-button {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.list-button:hover {
+    background-color: #ece9e9;
+}
+
+.list-icon {
+    margin-right: 10px;
+    color: #7494ec;
+    font-size: 30px;
+}
+
+.list-arrow {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.list-show {
+    display: none;
+    padding-left: 20px;
+}
+
+.list-inside {
+    padding-left: 20px;
+    background-color: #f9f9f9;
+}
+
+.list-inside .nav-link-inside {
+    padding: 10px 0;
+    display: block;
+}
+
+.list-button-click.active .list-arrow {
+    transform: rotate(90deg);
+}
+
+
+
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Asegura que el contenedor tenga la altura de la pantalla */
+}
+
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 250px);
+    margin-left: 250px; /* Espacio para el menú lateral */
+    height: 100vh; /* Asegura que el form-container tenga la altura de la pantalla */
+}
+
+.form-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 70%; 
+    max-width: 500px;
+    display: none;
+}
+
+.cont-subj{
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 85%; 
+}
+
+.add-sub{
+    margin-left: 30%;
+    margin-right: 30%;
+    display: none;
+}
+
+form {
+    width: 100%;
+}
+
+h1 {
+    font-size: 36px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 13px;
+    background: #eee;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+.input-box input::placeholder {
+    color: #888;
+    font-weight: 400;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+}
+
+.btn {
+    width: 100%;
+    height: 48px;
+    background: #7494ec;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+.btnSub {
+    width: 20%;
+    height: 48px;
+    background: #44c451;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    float: right;
+    margin-bottom: 15px;
+}
+
+.cont-subj {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 85%;
+    margin: auto;
+    text-align: center;
+}
+
+.subject-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    background-color: #e7dddd;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    width: 80%;
+    margin-left: 8%;
+}
+
+.subject-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    width: 100px;
+}
+
+.subject-link:hover {
+    color: #7494ec;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.btn-small {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Botón Consultar */
+.btn-small[name="btn-consult"] {
+    background-color: #44c451;
+    color: white;
+}
+
+.btn-small[name="btn-consult"]:hover {
+    background-color: #3ca141;
+    transform: scale(1.05);
+}
+
+/* Botón Actualizar */
+.btn-small[name="btn-modify"] {
+    background-color: #ffa500;
+    color: white;
+}
+
+.btn-small[name="btn-modify"]:hover {
+    background-color: #e59400;
+    transform: scale(1.05);
+}
+
+/* Botón Eliminar */
+.btn-small[name="btn-delete"] {
+    background-color: #ff5e5e;
+    color: white;
+}
+
+.btn-small[name="btn-delete"]:hover {
+    background-color: #e14c4c;
+    transform: scale(1.05);
+}
+
+
+.btnSj {
+    width: 300px;
+    border: 6px;
+    border-color: #000000;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    position: relative;
+    padding: 0.5em 2.4em;
+    font-size: 18px;
+    background: #fff;
+    cursor: pointer;
+    user-select: none;
+    color: rgb(15, 15, 15);
+    z-index: 1;
+    
+}
+
+.btnSj:hover {
+    width: 290px;
+    border: 1px;
+    border-color: #e7dddd;
+    border-radius: 6px;
+    font-weight: bold;
+    display: block;
+    position: relative;
+    padding: 0.5em 2.4em;
+    font-size: 18px;
+    background: rgb(45, 43, 43);
+    cursor: pointer;
+    user-select: none;
+    color: #fff;
+    z-index: 1;
+    
+}
+
+        
+
